@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+
+            <div class="nav">
+                <img id="settButton" src="./settings.png">
+                <img id="levels" src="./star.png">
+            </div>
+
+            <h1 id="level">Level 1</h1>
+
+            <img id="hintButton" src="./hint.png">
+
+        </div>
+        <div class="game">
+            <h3 id="question"></h3>
+            <div class="answerBox">
+                <Label>Enter Your Answer: 
+                    <input type="text" id="answer" minlength="1" maxlength="10" size="10">
+                </Label>
+                <button id="submit">Check Answer</button>
+            </div>
+
+        </div>
+
+        <canvas id="hintCanvas"></canvas>
+        <div class="settings">
+            <h1>Sound: </h1>
+            <img id="volume" src="./volume.png">
+        </div>
+        
+        <div class="feedback">
+            <img id="feedbackImg" src="./check-mark.png">
+            <img id="nextLevel" src="./nextLevel.png">
+        </div>
+
+    </div>
+</body>
+<script src="./scripts/main.js" type="module"></script>
+
+</html>

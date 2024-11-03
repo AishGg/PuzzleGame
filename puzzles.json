@@ -1,0 +1,55 @@
+{
+    "puzzles": [
+      {
+        "level": 1,
+        "question": "A man was found dead on a Sunday morning. The police questioned the wife and staff, who gave the following alibis: The wife said she was sleeping, the cook was cooking breakfast, the gardener was planting seeds, and the maid was getting the mail. Who is lying?",
+        "hints": [
+          "Think about what tasks are typically done on Sundays.",
+          "People don’t usually receive mail on Sundays.",
+          "One person mentioned something that doesn’t fit the day."
+        ],
+        "answer": "maid"
+      },
+      {
+        "level": 2,
+        "question": "I have keys but open no locks. I have space but no room. You can enter, but you can’t go outside. What am I?",
+        "hints": [
+          "It’s an object you interact with frequently.",
+          "It’s often part of electronic devices.",
+          "Think about where you type things."
+        ],
+        "answer": "keyboard"
+      },
+      {
+        "level": 3,
+        "question": "A man looks at a painting in a museum and says, 'Brothers and sisters, I have none, but that man’s father is my father’s son.' Who is in the painting?",
+        "hints": [
+          "Try breaking down the sentence logically.",
+          "The man in the painting is related to the speaker.",
+          "If he has no siblings, 'my father’s son' must be himself."
+        ],
+        "answer": "his son"
+      },
+      {
+        "level": 4,
+        "question": "There’s a cabin on a mountain with people inside, yet no one entered. How is this possible?",
+        "hints": [
+          "The word 'cabin' can refer to more than just a building.",
+          "Think about forms of transportation.",
+          "This 'cabin' is often found in the air."
+        ],
+        "answer": "plane crash site"
+      },
+      {
+        "level": 5,
+        "question": "What can travel around the world while staying in a corner?",
+        "hints": [
+          "It’s a small object, not a person.",
+          "It’s often associated with mail.",
+          "Think about something that appears on envelopes."
+        ],
+        "answer": "stamp"
+      }
+    ]
+  }
+  

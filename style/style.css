@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'comic';
+    src: url(../fonts/ComicNeue-Regular.ttf);
+}
+
+.main{
+    filter: blur(0);
+    font-family: 'comic';
+    position: relative;
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100vw;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header img{
+    margin: 1.5vw;
+    height: 75px;
+    width: 75px;
+}
+.header h1{
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    border-radius: 40%;
+    height: 5vw;
+    width: 12vw;
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    word-spacing: 1vw;
+    position: relative;
+    height: 35vw;
+    width: 100vw;
+}
+
+#question{
+    margin-top: 1.5vw;
+    font-size: 1.8vw;
+    margin-left: 3vw;       
+    margin-right: 3vw;       
+    text-align: center;
+    font-weight: bold;
+}
+.answerBox{
+    margin-top: 10vw;
+    font-size: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.answerBox input{
+    border: 2px solid yellowgreen;
+    border-radius: 1vw;
+    margin-left: 2vw;
+    font-size: 2.5vw;
+}
+.answerBox button{
+    background-color: lightgreen;
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    border: 2px solid black;
+    border-radius: 2vw;
+    height: 3vw;
+    width: 15vw;
+}
+.settings{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    height: 20vw;
+    width: 20vw;
+    background-color: rgb(214, 181, 245);
+    border-radius: 20%;
+}
+.settings img{
+    margin-left: 2vw;;
+    height: 6vw;
+    width: 6vw;
+}
+
+.feedback{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.feedback img{
+    margin-bottom: 10vw;
+    height: 9vw;
+    width: 9vw;
+}
