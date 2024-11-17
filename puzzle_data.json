@@ -1,0 +1,135 @@
+{
+  "stories": {
+    "story1": {
+      "title": "The Stolen Necklace",
+      "description": "A valuable necklace was stolen from a museum. The security guard, the janitor, and the curator were all questioned. Each gave their alibi: The security guard said he was checking the cameras. The janitor said he was cleaning the storage room. The curator said she was giving a tour to a group of visitors. However, the museum was closed for maintenance that day, and no tours were scheduled. Who is lying?",
+      "options": ["Security Guard", "Janitor", "Curator"],
+      "correctAnswer": "Curator",
+      "hints": [
+        "Consider the museum's schedule on that day.",
+        "Only one person mentioned a tour."
+      ]
+    },
+    "story2": {
+      "title": "The Late-Night Call",
+      "description": "A businessman was found dead in his office late at night. The police questioned the secretary, the janitor, and his assistant. The secretary said she was at home answering emails. The janitor said he was cleaning the floors. The assistant said he was out grabbing coffee. However, the security footage showed that the office doors were locked from the outside all night. Who is lying?",
+      "options": ["Secretary", "Janitor", "Assistant"],
+      "correctAnswer": "Assistant",
+      "hints": [
+        "Think about access to the office after hours.",
+        "No one could have entered once the doors were locked."
+      ]
+    },
+    "story3": {
+      "title": "The Missing Book",
+      "description": "A rare book went missing from the library archives. When questioned, the librarian, assistant, and a visitor gave the following accounts. The librarian said she was organizing the books. The assistant said he was filing paperwork. The visitor said he was reading in the archives. The archives section was under lock and key, with only the librarian having access. Who is lying?",
+      "options": ["Librarian", "Assistant", "Visitor"],
+      "correctAnswer": "Visitor",
+      "hints": [
+        "Consider who has access to the archives.",
+        "The visitor couldn't have been in a locked area."
+      ]
+    },
+    "story4": {
+      "title": "The Vanished Painting",
+      "description": "A painting disappeared from a gallery, and three staff members were questioned: the curator, the janitor, and a guard. The curator said he was preparing for an exhibition. The janitor said he was cleaning the basement. The guard said he was patrolling the exhibit halls. However, it was discovered the basement was flooded and off-limits that day. Who is lying?",
+      "options": ["Curator", "Janitor", "Guard"],
+      "correctAnswer": "Janitor",
+      "hints": [
+        "Remember the state of the basement that day.",
+        "One person mentioned working in an off-limits area."
+      ]
+    },
+    "story5": {
+      "title": "The Mysterious Robbery",
+      "description": "During a jewelry store robbery investigation, the police questioned three suspects: the cashier, the security guard, and a customer. The cashier said she was organizing the display. The security guard said he was taking a break. The customer claimed he was browsing. However, the store's policy does not allow anyone, even the guard, to leave their post during business hours. Who is lying?",
+      "options": ["Cashier", "Security Guard", "Customer"],
+      "correctAnswer": "Security Guard",
+      "hints": [
+        "Think about the store's policy for guards.",
+        "The security guard shouldn’t have left his post."
+      ]
+    }
+  },
+  "riddles": {
+    "riddle1": {
+      "description": "I have branches, but no fruit, trunk, or leaves. What am I?",
+      "options": ["A Bank", "A Tree", "A Family"],
+      "correctAnswer": "A Bank"
+    },
+    "riddle2": {
+      "description": "The more you take, the more you leave behind. What am I?",
+      "options": ["Memories", "Time", "Footsteps"],
+      "correctAnswer": "Footsteps"
+    },
+    "riddle3": {
+      "description": "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+      "options": ["A Candle", "A Tree", "A Pencil"],
+      "correctAnswer": "A Candle"
+    },
+    "riddle4": {
+      "description": "I can travel around the world while staying in the same corner. What am I?",
+      "options": ["A Stamp", "A Bird", "A Phone"],
+      "correctAnswer": "A Stamp"
+    },
+    "riddle5": {
+      "description": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+      "options": ["An Echo", "A Song", "A Flag"],
+      "correctAnswer": "An Echo"
+    }
+  },
+  "brainTeasers": {
+    "teaser1": {
+      "description": "What has keys but can't open locks?",
+      "options": ["A Piano", "A Map", "A Code"],
+      "correctAnswer": "A Piano"
+    },
+    "teaser2": {
+      "description": "You see me once in June, twice in November, but not at all in May. What am I?",
+      "options": ["The Letter E", "The Moon", "A Comet"],
+      "correctAnswer": "The Letter E"
+    },
+    "teaser3": {
+      "description": "I'm light as a feather, yet the strongest person can't hold me for long. What am I?",
+      "options": ["Breath", "A Cloud", "A Balloon"],
+      "correctAnswer": "Breath"
+    },
+    "teaser4": {
+      "description": "What can you catch but not throw?",
+      "options": ["A Cold", "A Ball", "A Shadow"],
+      "correctAnswer": "A Cold"
+    },
+    "teaser5": {
+      "description": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+      "options": ["The Letter M", "The Sun", "Time"],
+      "correctAnswer": "The Letter M"
+    }
+  },
+  "triviaQuestions": {
+    "question1": {
+      "description": "Who was the first president of the United States?",
+      "options": ["George Washington", "Thomas Jefferson", "Abraham Lincoln"],
+      "correctAnswer": "George Washington"
+    },
+    "question2": {
+      "description": "What planet is known as the Red Planet?",
+      "options": ["Mars", "Venus", "Jupiter"],
+      "correctAnswer": "Mars"
+    },
+    "question3": {
+      "description": "What is the largest mammal in the world?",
+      "options": ["Elephant", "Blue Whale", "Great White Shark"],
+      "correctAnswer": "Blue Whale"
+    },
+    "question4": {
+      "description": "Which element has the chemical symbol 'O'?",
+      "options": ["Oxygen", "Gold", "Iron"],
+      "correctAnswer": "Oxygen"
+    },
+    "question5": {
+      "description": "How many continents are there?",
+      "options": ["Five", "Six", "Seven"],
+      "correctAnswer": "Seven"
+    }
+  }
+}

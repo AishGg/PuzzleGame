@@ -6,6 +6,7 @@
 html,body{
     height: 100%;
     width: 100%;
+    overflow:hidden
 }
 
 @font-face {
@@ -51,37 +52,53 @@ html,body{
     height: 35vw;
     width: 100vw;
 }
-
+#title{
+    margin-top: 1vw;
+    font-size: 1.5vw;
+    margin-left: 3vw;       
+    margin-right: 3vw;       
+    text-align: center;
+    color: rgb(73, 19, 117);
+}
 #question{
     margin-top: 1.5vw;
     font-size: 1.8vw;
     margin-left: 3vw;       
     margin-right: 3vw;       
     text-align: center;
-    font-weight: bold;
+    word-spacing: 1.5vw;
+    line-height: 2.5vw;
 }
-.answerBox{
-    margin-top: 10vw;
-    font-size: 2.5vw;
+.puzzleOptions{
+    margin-top: 3vw;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.options{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.answerBox input{
-    border: 2px solid yellowgreen;
+.puzzleOptions input{
     border-radius: 1vw;
     margin-left: 2vw;
     font-size: 2.5vw;
 }
-.answerBox button{
+.puzzleOptions label{
+    margin-left: 1vw;
+}
+.game button{
     background-color: lightgreen;
-    margin-top: 2vw;
-    font-size: 1.5vw;
+    margin-top: 1.2vw;
+    font-size: 1.2vw;
     border: 2px solid black;
     border-radius: 2vw;
-    height: 3vw;
-    width: 15vw;
+    height: 2.5vw;
+    width: 12vw;
 }
 .settings{
     display: none;

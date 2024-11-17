@@ -12,6 +12,16 @@ window.addEventListener('load', function () {
         if (e.target.id === 'settButton') {
             document.querySelector('.settings').style.display = 'flex';
         }
+        if (e.target.id === 'volume') {
+            const volumeValue = document.querySelector('audio').volume;
+            if(volumeValue ===0){
+                document.querySelector('audio').volume = 1;
+                document.getElementById('volume').src = "./volume.png";
+            }else{
+                document.querySelector('audio').volume = 0;
+                document.getElementById('volume').src = "./silent.png";
+            }
+        }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
@@ -28,12 +38,25 @@ window.addEventListener('load', function () {
         }
 
         if (e.target.id === 'submit') {
-            game.checkAnswer();
+            if (game.currentPuzzle.title) {
+                game.checkAnswer();
+            } else if (game.currentRiddle.description) {
+                game.checkRiddleAnswer();
+            }
         }
+
         if (e.target.id === 'nextLevel') {
             game.nextLevel();
         }
         
+        if (e.target.type === 'checkbox') {
+            const checkboxes = document.querySelectorAll('.puzzleOptions input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== e.target) {
+                    checkbox.checked = false;
+                }
+            });
+        }
     });
 
 

@@ -24,26 +24,31 @@
 
         </div>
         <div class="game">
+            <h2 id="title"></h2>
             <h3 id="question"></h3>
-            <div class="answerBox">
-                <Label>Enter Your Answer: 
-                    <input type="text" id="answer" minlength="1" maxlength="10" size="10">
-                </Label>
-                <button id="submit">Check Answer</button>
+            <div class="options">
+                <div class="puzzleOptions"></div>
+                <button id="submit" type="submit">Check Answer</button>
             </div>
+            
 
         </div>
 
         <canvas id="hintCanvas"></canvas>
         <div class="settings">
             <h1>Sound: </h1>
-            <img id="volume" src="./volume.png">
+            <img id="volume" alt="volume" src="./volume.png">
+            <button type="button">Change Music</button>
         </div>
         
         <div class="feedback">
             <img id="feedbackImg" src="./check-mark.png">
             <img id="nextLevel" src="./nextLevel.png">
         </div>
+
+        <audio autoplay loop>
+            <source src="./sounds/scheming-background.mp3" type="audio/mp3">
+        </audio>
 
     </div>
 </body>
