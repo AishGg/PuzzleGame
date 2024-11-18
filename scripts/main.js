@@ -49,11 +49,7 @@ window.addEventListener('load', function () {
             document.querySelector('.settings').style.display = 'none'; // Hide settings
             document.querySelector('.main').classList.remove('blur');
         }
-                    
-        if (e.target.id === 'levels') {
-            alert("you clicked the img");
-        }
-
+        
         if (e.target.id === 'hintButton') {
             game.getHint();
         }
