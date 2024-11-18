@@ -52,6 +52,20 @@ html,body{
     height: 35vw;
     width: 100vw;
 }
+.main.blur {
+    filter: blur(15px); /* Adjust the blur intensity as needed */
+    pointer-events: none; /* Prevent clicks on the main element */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure it is above other elements */
+}
 #title{
     margin-top: 1vw;
     font-size: 1.5vw;
@@ -102,8 +116,9 @@ html,body{
 }
 .settings{
     display: none;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -114,12 +129,32 @@ html,body{
     border-radius: 20%;
 }
 .settings img{
-    margin-left: 2vw;;
     height: 6vw;
     width: 6vw;
 }
+.settings button {
+    margin-top: 15px; /* Add spacing between elements */
+    padding: 8px 16px;
+    background-color: #6a5acd; /* A nice complementary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
 
 .feedback{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.incorrectFeedback{
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -135,3 +170,15 @@ html,body{
     height: 9vw;
     width: 9vw;
 }
+.incorrectFeedback img{
+    margin-bottom: 10vw;
+    height: 6vw;
+    width: 6vw;
+}
+.incorrectFeedback h1{
+    margin-bottom: 3vw;
+    font-size:3vw;
+    color: red;
+}
+
+

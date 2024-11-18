@@ -5,16 +5,25 @@ export class Game {
         this.currentPuzzle = {};
         this.currentHintIndex = 0;
         this.currentRiddle = {};
+        this.currentQuestion = {};
+        this.currentMusic = './sounds/sound2.mp3'
     }
 
     getLevel() {
         return this.level;
+    }
+
+    changeMusic(){
+        if(this.currentMusic){
+
+        }
     }
     
     nextLevel() {
         this.level++;
         document.getElementById('level').innerText = `Level ${this.level}`;
         document.querySelector('.feedback').style.display = 'none';
+        document.querySelector('.main').classList.remove('blur');
         this.getPuzzles();
     }
 
@@ -60,6 +69,29 @@ async getRiddles() {
         console.error('Error loading riddle:', error);
     }
 }
+async getTriviaQuestions() {
+    try {
+        const response = await fetch('../puzzle_data.json');
+        const data = await response.json();
+        const triviaQuestions = data.triviaQuestions;
+        console.log(triviaQuestions)
+
+        const key = `question${this.level}`;
+        console.log(key);
+        if (triviaQuestions.hasOwnProperty(key)) {
+            this.currentQuestion = triviaQuestions[key];
+            console.log(this.currentQuestion);
+            this.currentHintIndex = 0;
+            this.displaytriviaQuestion();
+            this.displayOptions(this.currentQuestion.options);
+        } else {
+            console.warn('No riddles found for the specified level');
+        }
+    } catch(error) {
+        console.error('Error loading riddle:', error);
+    }
+}
+
 
 displayPuzzle(){
     document.getElementById('title').innerHTML = this.currentPuzzle.title;
@@ -68,6 +100,10 @@ displayPuzzle(){
 displayRiddle(){
     document.getElementById('title').innerText = "Time for Riddle"
     document.getElementById('question').innerHTML = this.currentRiddle.description;
+}
+displaytriviaQuestion(){
+    document.getElementById('title').innerText = "One Quick Genral Question"
+    document.getElementById('question').innerHTML = this.currentQuestion.description;
 }
 
 
@@ -267,13 +303,14 @@ getHint() {
 checkAnswer() {
     const selectedOption = Array.from(document.querySelectorAll('.puzzleOptions input[type="checkbox"]'))
         .find(checkbox => checkbox.checked);
-        console.log(selectedOption);
-        console.log(this.currentRiddle.correctAnswer);
+    console.log(selectedOption);
+    console.log(this.currentRiddle.correctAnswer);
 
     if (selectedOption) {
         if (selectedOption.value === this.currentPuzzle.correctAnswer) {
             console.log('Correct answer! Fetching riddle...');
             this.currentPuzzle = {};
+            document.getElementById('selectOption').style.display = 'none';
             // Clear the options
             const container = document.querySelector('.puzzleOptions');
             container.innerHTML = ''; // Clear existing options
@@ -282,10 +319,11 @@ checkAnswer() {
             // Fetch and display the riddle
             this.getRiddles(); 
         } else {
-            alert('Incorrect');
+            document.querySelector('.incorrectFeedback').style.display = 'flex';
+            document.querySelector('.main').classList.add('blur');
         }
     } else {
-        alert('Please select an option before checking the answer.'); // Alert if no option is selected
+        document.getElementById('selectOption').style.display = 'block'; // Alert if no option is selected
     }
 }
 
@@ -296,12 +334,39 @@ checkRiddleAnswer() {
 
     if (selectedOption) {
         if (selectedOption.value === this.currentRiddle.correctAnswer) {
-            alert("answer is correct") // Fetch and display a brainteaser after checking the riddle answer
+            console.log('Correct answer! Fetching question...');
+            this.currentRiddle = {};
+            document.getElementById('selectOption').style.display = 'none';
+            // Clear the options
+            const container = document.querySelector('.puzzleOptions');
+            container.innerHTML = ''; // Clear existing options
+            // Hide feedback
+            document.querySelector('.feedback').style.display = 'none'; 
+            // Fetch and display the riddle
+            this.getTriviaQuestions(); // Fetch and display a brainteaser after checking the riddle answer
         } else {
-            alert('Incorrect');
+            document.querySelector('.main').classList.add('blur');
+            document.querySelector('.incorrectFeedback').style.display = 'flex';
         }
     } else {
-        alert('Please select an option before checking the answer.'); // Alert if no option is selected
+        document.getElementById('selectOption').style.display = 'block';
+    }
+}
+checkTriviaQuestion(){
+    const selectedOption = Array.from(document.querySelectorAll('.puzzleOptions input[type="checkbox"]'))
+        .find(checkbox => checkbox.checked); // Find the checked checkbox
+
+    if (selectedOption) {
+        if (selectedOption.value === this.currentQuestion.correctAnswer) {
+            document.getElementById('selectOption').style.display = 'none';
+            document.querySelector('.feedback').style.display = 'flex';
+            document.querySelector('.main').classList.add('blur');
+        } else {
+            document.querySelector('.main').classList.add('blur');
+            document.querySelector('.incorrectFeedback').style.display = 'flex';
+        }
+    } else {
+        document.getElementById('selectOption').style.display = 'block'; // Alert if no option is selected
     }
 }
 

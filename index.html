@@ -29,27 +29,37 @@
             <div class="options">
                 <div class="puzzleOptions"></div>
                 <button id="submit" type="submit">Check Answer</button>
+                <h1 id="selectOption" style="display: none; margin-top: 2vw;">Please Select One option</h1>
             </div>
             
 
         </div>
 
         <canvas id="hintCanvas"></canvas>
-        <div class="settings">
-            <h1>Sound: </h1>
-            <img id="volume" alt="volume" src="./volume.png">
-            <button type="button">Change Music</button>
-        </div>
-        
-        <div class="feedback">
-            <img id="feedbackImg" src="./check-mark.png">
-            <img id="nextLevel" src="./nextLevel.png">
-        </div>
 
         <audio autoplay loop>
-            <source src="./sounds/scheming-background.mp3" type="audio/mp3">
+            <source id="gameAudio" src="./sounds/sound2.mp3" type="audio/mp3">
         </audio>
 
+    </div>
+
+    <div class="settings">
+        <img id="volume" alt="volume" src="./volume.png">
+        <button type="button" id="ChangeMusic">Change Music</button>
+        <button id="closeSettings" type="button">Exit</button>
+    </div>
+
+    <div class="feedback">
+        <img id="feedbackImg" src="./check-mark.png">
+        <p>Congraturlations <br>Click To Move Next Level</p>
+        <img id="nextLevel" src="./nextLevel.png">
+    </div>
+    
+    <div class="incorrectFeedback">
+        <img id="IncorrectImg" src="./cancel.png">
+        
+        <img id="tryAgain" src="./refresh.png">
+        <h1>Try Again</h1>
     </div>
 </body>
 <script src="./scripts/main.js" type="module"></script>
