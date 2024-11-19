@@ -177,4 +177,71 @@ html,body{
     color: red;
 }
 
+.startPage {
+    font-family: 'comic';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0e68c;
+    color: #333;
+    text-align: center;
+}
 
+.startPage h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.startPage p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.startPage ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.startPage li {
+    margin: 5px 0;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Add this to your style/style.css */
+.instructions-card {
+    background-color: #8B4513;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Comic', sans-serif;
+    color: #FFD700;
+}
+
+.instructions-card ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.instructions-card li {
+    margin: 5px 0; /* Space between list items */
+}

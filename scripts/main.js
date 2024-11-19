@@ -19,7 +19,13 @@ window.addEventListener('load', function () {
     audioElement.play();
 
     
+
     window.addEventListener('click', (e) => {
+
+        if(e.target.id === 'startButton'){
+            document.querySelector('.startPage').style.display = 'none'; // Hide the start page
+            document.querySelector('.main').style.display = 'block';
+        }
 
       
         if (e.target.id === 'volume') {
