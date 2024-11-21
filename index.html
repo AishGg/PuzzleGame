@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <title>Puzzle Game</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -12,14 +12,14 @@
 <body>
     <div class="startPage">
         <h1>Welcome to the Puzzle Game!</h1>
-        <p>Test your skills and solve the puzzles to advance through the levels.</p>
         <button id="startButton">Start Game</button>
         <div class="instructions-card">
             <p>Instructions:</p>
             <ul>
-                <li>Select the correct answer from the options provided.</li>
-                <li>Click "Check Answer" to see if you're correct.</li>
-                <li>Good luck and have fun!</li>
+                <li>First Solve a Puzzle (Click Hint Button For Hints)</li>
+                <li>Second solve a Riddle</li>
+                <li>Third move to General Question</li>
+                <li>Last Move Next Level</li>
             </ul>
         </div>
         <p class="copyright">© 2024 Ashish Garg. All rights reserved.</p>
@@ -29,12 +29,12 @@
         <div class="header">
 
             <div class="nav">
-                <img id="settButton" src="./settings.png">
+                <img id="settButton" src="./images/settings.png">
             </div>
 
             <h1 id="level">Level 1</h1>
 
-            <img id="hintButton" src="./hint.png">
+            <img id="hintButton" src="./images/hint.png">
 
         </div>
        
@@ -58,23 +58,31 @@
 
     </div>
 
+    <div class="gameEnd";">
+        <div class="gameEnd-content">
+            <h1>Congratulations!</h1>
+            <p>You have completed the game!</p>
+            <button id="restartButton">Start Again</button>
+        </div>
+    </div>
+
     <div class="settings">
-        <img id="volume" alt="volume" src="./volume.png">
+        <img id="volume" alt="volume" src="./images/volume.png">
         <button type="button" id="ChangeMusic">Change Music</button>
         <button id="closeSettings" type="button">Exit</button>
     </div>
 
     <div class="feedback">
-        <img id="feedbackImg" src="./check-mark.png">
+        <img id="feedbackImg" src="./images/check-mark.png">
         <p>Congraturlations</p>
         <p>Click Next</p>
-        <img id="nextLevel" src="./nextLevel.png">
+        <img id="nextLevel" src="./images/nextLevel.png">
     </div>
     
     <div class="incorrectFeedback">
-        <img id="IncorrectImg" src="./cancel.png">
+        <img id="IncorrectImg" src="./images/cancel.png">
         
-        <img id="tryAgain" src="./refresh.png">
+        <img id="tryAgain" src="./images/refresh.png">
         <h1>Try Again</h1>
     </div>
 </body>

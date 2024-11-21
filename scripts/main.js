@@ -8,34 +8,47 @@ const musicTracks = [
 
 let currentTrackIndex = 0;
 
+window.addEventListener('click', (e) => {
+
+});
+
 window.addEventListener('load', function () {
 
     game = new Game();
     game.getPuzzles();
-    
-    
+
+
     const audioElement = document.querySelector('audio');
     audioElement.src = musicTracks[currentTrackIndex];
     audioElement.play();
 
-    
+
+    window.addEventListener('click', (e) => {
+        if (e.target.id === 'restartButton') {
+            document.querySelector('.gameEnd').style.display = 'none'; // Hide the end page
+            document.querySelector('.startPage').style.display = 'flex'; // Show the start page
+            document.querySelector('.main').style.display = 'none'; // Hide the main game area
+        }
+    });
 
     window.addEventListener('click', (e) => {
 
-        if(e.target.id === 'startButton'){
+        if (e.target.id === 'startButton') {
+            game.startGame();
             document.querySelector('.startPage').style.display = 'none'; // Hide the start page
             document.querySelector('.main').style.display = 'block';
         }
 
-      
+
+
         if (e.target.id === 'volume') {
             const volumeValue = document.querySelector('audio').volume;
-            if(volumeValue ===0){
+            if (volumeValue === 0) {
                 document.querySelector('audio').volume = 1;
-                document.getElementById('volume').src = "./volume.png";
-            }else{
+                document.getElementById('volume').src = "./images/volume.png";
+            } else {
                 document.querySelector('audio').volume = 0;
-                document.getElementById('volume').src = "./silent.png";
+                document.getElementById('volume').src = "./images/silent.png";
             }
         }
 
@@ -48,14 +61,14 @@ window.addEventListener('load', function () {
         if (e.target.id === 'settButton') {
             document.querySelector('.settings').style.display = 'flex';
             document.querySelector('.main').classList.add('blur');
-            
+
         }
 
         if (e.target.id === 'closeSettings') { // Check if the close button is clicked
             document.querySelector('.settings').style.display = 'none'; // Hide settings
             document.querySelector('.main').classList.remove('blur');
         }
-        
+
         if (e.target.id === 'hintButton') {
             game.getHint();
         }
@@ -65,7 +78,7 @@ window.addEventListener('load', function () {
                 game.checkAnswer();
             } else if (game.currentRiddle.description) {
                 game.checkRiddleAnswer();
-            }else if (game.currentQuestion.description) {
+            } else if (game.currentQuestion.description) {
                 game.checkTriviaQuestion();
             }
         }
@@ -78,8 +91,8 @@ window.addEventListener('load', function () {
             document.querySelector('.main').classList.remove('blur');
             document.querySelector('.incorrectFeedback').style.display = 'none';
         }
-        
-        
+
+
         if (e.target.type === 'checkbox') {
             const checkboxes = document.querySelectorAll('.puzzleOptions input[type="checkbox"]');
             checkboxes.forEach(checkbox => {
