@@ -54,8 +54,8 @@ html,body{
     width: 100vw;
 }
 .main.blur {
-    filter: blur(15px); /* Adjust the blur intensity as needed */
-    pointer-events: none; /* Prevent clicks on the main element */
+    filter: blur(15px); 
+    pointer-events: none; 
 }
 
 #title{
@@ -125,9 +125,9 @@ html,body{
     width: 6vw;
 }
 .settings button {
-    margin-top: 15px; /* Add spacing between elements */
+    margin-top: 15px;
     padding: 8px 16px;
-    background-color: #6a5acd; /* A nice complementary color */
+    background-color: #6a5acd; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -208,7 +208,7 @@ html,body{
     padding: 10px 20px;
     font-size: 1.2em;
     color: white;
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -216,10 +216,10 @@ html,body{
 }
 
 #startButton:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
 }
 
-/* Add this to your style/style.css */
+
 .instructions-card {
     background-color: #8B4513;
     color: white;
@@ -234,12 +234,12 @@ html,body{
 }
 
 .instructions-card ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
+    list-style-type: none; 
+    padding: 0; 
 }
 
 .instructions-card li {
-    margin: 5px 0; /* Space between list items */
+    margin: 5px 0; 
 }
 .gameEnd {
     display: flex;
@@ -248,44 +248,43 @@ html,body{
     flex-direction: column;
     height: 100vh;
     background: linear-gradient(to bottom right, rgba(0, 128, 0, 0.8), rgba(0, 255, 0, 0.5)); /* Gradient background */
-    color: white; /* White text color */
+    color: white; 
     text-align: center;
     position: relative;
-    z-index: 1000; /* Ensure it appears above other elements */
-    font-family: 'comic'; /* Use the comic font */
+    z-index: 1000;
+    font-family: 'comic'; 
 }
 
 .gameEnd-content {
-    /* Removed box model properties */
-    background: transparent; /* Make background transparent */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for depth */
+    background: transparent; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .gameEnd-content h1 {
-    font-size: 3em; /* Larger font size for the heading */
-    margin-bottom: 10px; /* Space below the heading */
-    text-transform: uppercase; /* Make text uppercase */
-    letter-spacing: 2px; /* Add letter spacing for effect */
+    font-size: 3em; 
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .gameEnd-content p {
-    font-size: 1.5em; /* Slightly larger font size for the paragraph */
-    margin-bottom: 20px; /* Space below the paragraph */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+    font-size: 1.5em; 
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
 }
 
 .gameEnd-content button {
-    background-color: #ff6b6b; /* Soft red color for the button */
-    color: white; /* White text color for the button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners for the button */
-    font-size: 1.5em; /* Font size for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    padding: 10px 20px; /* Add some padding for better click area */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+    background-color: #ff6b6b; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    padding: 10px 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .gameEnd-content button:hover {
-    background-color: #ff4c4c; /* Darker red on hover */
+    background-color: #ff4c4c; 
 }

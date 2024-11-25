@@ -2,7 +2,7 @@ import { Game } from './game.js';
 let game;
 
 const musicTracks = [
-    './sounds/sound1.mp3', // Replace with your actual music file paths
+    './sounds/sound1.mp3',
     './sounds/sound2.mp3'
 ];
 
@@ -25,9 +25,9 @@ window.addEventListener('load', function () {
 
     window.addEventListener('click', (e) => {
         if (e.target.id === 'restartButton') {
-            document.querySelector('.gameEnd').style.display = 'none'; // Hide the end page
-            document.querySelector('.startPage').style.display = 'flex'; // Show the start page
-            document.querySelector('.main').style.display = 'none'; // Hide the main game area
+            document.querySelector('.gameEnd').style.display = 'none';
+            document.querySelector('.startPage').style.display = 'flex';
+            document.querySelector('.main').style.display = 'none';
         }
     });
 
@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
 
         if (e.target.id === 'startButton') {
             game.startGame();
-            document.querySelector('.startPage').style.display = 'none'; // Hide the start page
+            document.querySelector('.startPage').style.display = 'none';
             document.querySelector('.main').style.display = 'block';
         }
 
@@ -52,9 +52,9 @@ window.addEventListener('load', function () {
             }
         }
 
-        if (e.target.id === 'ChangeMusic') { // Check if the close button is clicked
-            currentTrackIndex = (currentTrackIndex + 1) % musicTracks.length; // Move to the next track
-            audioElement.src = musicTracks[currentTrackIndex]; // Update the audio source
+        if (e.target.id === 'ChangeMusic') {
+            currentTrackIndex = (currentTrackIndex + 1) % musicTracks.length;
+            audioElement.src = musicTracks[currentTrackIndex];
             audioElement.play()
         }
 
@@ -64,8 +64,8 @@ window.addEventListener('load', function () {
 
         }
 
-        if (e.target.id === 'closeSettings') { // Check if the close button is clicked
-            document.querySelector('.settings').style.display = 'none'; // Hide settings
+        if (e.target.id === 'closeSettings') {
+            document.querySelector('.settings').style.display = 'none';
             document.querySelector('.main').classList.remove('blur');
         }
 
