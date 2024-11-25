@@ -37,6 +37,11 @@ window.addEventListener('load', function () {
             game.startGame();
             document.querySelector('.startPage').style.display = 'none';
             document.querySelector('.main').style.display = 'block';
+
+            const audioElement = document.querySelector('audio');
+            audioElement.src = musicTracks[currentTrackIndex];
+            audioElement.volume = 0.1;
+            audioElement.play();
         }
 
 
